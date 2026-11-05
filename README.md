@@ -148,3 +148,7 @@ Free Render services sleep after inactivity; the first request can take ~1 minut
 - Agglomerative clustering is fitted on up to 6,000 customers and DBSCAN on up to 15,000; the rest are assigned to the nearest segment/core point.
 - Silhouette scores around 0.2–0.3 mean segments overlap — normal for real customers, but boundary customers may behave like a neighbouring segment.
 - Personas are interpretations of averages, not descriptions of real individuals.
+
+---
+
+Built by **Haniya Imran**.
