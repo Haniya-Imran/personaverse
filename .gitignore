@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Uploaded or generated data (only the documented sample is committed)
+data/*
+!data/customer_personality_ifood.csv
+!data/README.md
+*.tsbuildinfo

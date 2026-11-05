@@ -1,0 +1,21 @@
+# Render Blueprint for the PersonaVerse FastAPI backend.
+# Render → New → Blueprint → select this repository.
+services:
+  - type: web
+    name: personaverse-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: ALLOWED_ORIGINS
+        sync: false   # e.g. https://personaverse.vercel.app
+      - key: GEMINI_API_KEY
+        sync: false   # free key from https://aistudio.google.com/apikey
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: SESSION_TTL_MINUTES
+        value: "120"
